@@ -1,0 +1,20 @@
+// font-family: 'Cinzel', serif;
+// font-family: 'Montserrat', sans-serif;
+
+body {
+    font-family: $text-main;
+}
+
+.section-heading-span {
+    font-size: $size-small-4;
+}
+
+.section-heading {
+    font-family: $text-brand;
+    margin-bottom: $size-tiny-3;
+
+    &-albums {
+        color: $color-dark-bg-grey;
+        margin-bottom: $size-x-small-4;
+    }
+}

@@ -1,0 +1,49 @@
+.shows {
+    @include smallMobileSectionPadding;
+
+    background-color: $color-extra-light-grey-2;
+
+    &-container {
+        margin-bottom: 3.5rem;
+        position: relative;
+    }
+
+    &-bg-img {
+        border-radius: 5px;
+    }
+
+    &-date-box {
+        display: flex;
+        align-items: center;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        color: $color-white;
+
+        &-date {
+            margin-left: 1rem;
+            margin-right: 1.5rem;
+
+            &-day {
+                font-size: 1.75rem;
+            }
+
+            &-month {
+                font-size: 1rem;
+            }
+        }
+
+        &-location {
+
+            &-venue {
+                font-size: 1.75rem;
+            }
+
+            &-city {
+                font-size: 1rem;
+            }
+        }
+    }
+}

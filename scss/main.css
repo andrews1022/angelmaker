@@ -1,0 +1,373 @@
+/*
+By default, the site you build with this optimized for min-width of 360px.
+From here, just scale upwards/re-align elements as need be.
+This site structure assumes a mobile-first approach, hence the use of min-width
+
+$breakpoint argument choices:
+- tab-port (tablet-portrait)
+- tab-land (tablet-landscape)
+- laptop (standard laptop screen resolution)
+- desktop (standard desktop screen resolution)
+- desktop-lg (1440p resolution desktop)
+- desktop-4k (4k resolution desktop)
+
+** MIN-WIDTH SETTINGS **
+- mobile-lg == min-width 576px
+- tab-port == min-width 768px
+- tab-land == min-width 1024px
+- laptop == min-width 1366px
+- desktop == min-width 1920px
+- desktop-lg == min-width 2560px
+- desktop-4k == min-width 3840px
+
+1em = 16px (16px is the default browser font-size)
+Each em amount is the min-width listed above divided 16
+For example, for tab-port, 768px / 16px = 48em
+*/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  /* Equivalent to 10px */
+}
+
+@media only screen and (min-width: 36em) {
+  html {
+    font-size: 65.65%;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  html {
+    font-size: 68.75%;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (min-width: 85.375em) {
+  html {
+    font-size: 81.25%;
+  }
+}
+
+@media only screen and (min-width: 120em) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@media only screen and (min-width: 160em) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 240em) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 3.25rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+p {
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 45ch;
+  /* These character lengths are based on recommended line length for maximum clarity, readability and proportion in print
+
+    These recommendations are based on a number of factors, such as:
+    - How people tend to read.
+    - The ease or difficulty in following a line to the end and bringing your eye back to the start of the next line.
+    - Quickly understanding the relative importance of various levels of headings between blocks of copy.
+
+    Read more about it here:
+    https://typecast.com/blog/a-more-modern-scale-for-web-typography
+    */
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 85.375em) {
+  p {
+    max-width: 70ch;
+  }
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-heading-span {
+  font-size: 3.75rem;
+}
+
+.section-heading {
+  font-family: "Cinzel", serif;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading-albums {
+  color: #d8d8d8;
+  margin-bottom: 2.75rem;
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-center {
+  margin: 0 auto;
+}
+
+.music-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.music-box-icon:link, .music-box-icon:visited {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  margin-left: 2rem;
+  padding: 1rem;
+  text-decoration: none;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  border: 1px solid #181818;
+  color: #181818;
+  font-size: 2rem;
+  height: 4rem;
+  width: 4rem;
+}
+
+@media only screen and (min-width: 85.375em) {
+  .music-box-icon:link:hover, .music-box-icon:link:active, .music-box-icon:link:focus, .music-box-icon:visited:hover, .music-box-icon:visited:active, .music-box-icon:visited:focus {
+    background-color: #181818;
+    -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    color: #ef4d4b;
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+}
+
+.music-box-icon-light:link, .music-box-icon-light:visited {
+  border: 1px solid #d8d8d8;
+  color: #d8d8d8;
+}
+
+@media only screen and (min-width: 85.375em) {
+  .music-box-icon-light:link:hover, .music-box-icon-light:link:active, .music-box-icon-light:link:focus, .music-box-icon-light:visited:hover, .music-box-icon-light:visited:active, .music-box-icon-light:visited:focus {
+    background-color: #d8d8d8;
+    color: #000;
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+}
+
+.nav-list {
+  font-family: "Cinzel", serif;
+  font-size: 1.5rem;
+}
+
+.nav-list-span {
+  font-size: 1.75rem;
+}
+
+.albums {
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: #000;
+}
+
+@media only screen and (min-width: 64em) {
+  .albums-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+.albums-box:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.albums-cover {
+  border-radius: 5px;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.albums-text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.albums-text-box-heading {
+  color: #d8d8d8;
+  font-family: "Cinzel", serif;
+  font-size: 2rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.albums-icon-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #d8d8d8;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+}
+
+.header {
+  background-image: url("../../img/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #181818;
+  height: 100vh;
+  position: relative;
+}
+
+.header-box-img {
+  margin-left: 3rem;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.header-box-heading {
+  font-family: "Cinzel", serif;
+  font-size: 3.75rem;
+}
+
+.header-box-text-box {
+  float: right;
+  padding: 0 2rem;
+  text-align: right;
+  width: 85%;
+}
+
+.shows {
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: #eee;
+}
+
+.shows-container {
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.shows-bg-img {
+  border-radius: 5px;
+}
+
+.shows-date-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+}
+
+.shows-date-box-date {
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+}
+
+.shows-date-box-date-day {
+  font-size: 1.75rem;
+}
+
+.shows-date-box-date-month {
+  font-size: 1rem;
+}
+
+.shows-date-box-location-venue {
+  font-size: 1.75rem;
+}
+
+.shows-date-box-location-city {
+  font-size: 1rem;
+}

@@ -1,0 +1,56 @@
+// Header rounded buttons w/ hover effect
+
+// Stylings for icon container
+.music-box {
+    display: flex;
+    justify-content: flex-end;
+
+    // Stylings for the icons themselves
+    &-icon:link,
+    &-icon:visited {
+        @include flexboxCenter;
+
+        border-radius: 50%;
+        margin-left: 2rem;
+        padding: 1rem;
+        text-decoration: none;
+        transition: $standard-transition;
+        border: 1px solid $color-tertiary-extra-dark;
+        color: $color-tertiary-extra-dark;
+        font-size: 2rem;
+        height: 4rem;
+        width: 4rem;
+
+        // Hover stylings for laptop screen res or higher only
+        @include respond(laptop) {
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $color-tertiary-extra-dark;
+                box-shadow: $box-shadow-light-1;
+                color: $color-primary;
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+    // Stylings for light-grey version of the music icons
+    &-icon-light:link,
+    &-icon-light:visited {
+        border: 1px solid $color-dark-bg-grey;
+        color: $color-dark-bg-grey;
+
+        // Hover stylings for laptop screen res or higher only
+        @include respond(laptop) {
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $color-dark-bg-grey;
+                color: $color-black;
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
