@@ -3,28 +3,42 @@
     background-color: #9b2a29;
     color: $color-dark-bg-grey;
 
+    &-wrapper {
+        @include respond(tab-port) {
+            @include flexboxCenter;
+        }
+    }
+
     &-nav {
-        margin: 4rem 0;
+        margin: $size-large-1 0;
         text-align: $text-center;
+
+        @include respond(tab-port) {
+            margin-right: 5rem;
+            text-align: left;
+        }
 
         &-list {
 
             &-link:link,
             &-link:visited {
                 color: $color-dark-bg-grey;
-                font-size: 1.75rem;
+                font-size: $size-tiny-4;
                 transition: $standard-transition;
             }
 
             &-link:hover,
             &-link:active,
             &-link:focus {
-                color: $color-tertiary-extra-dark;
-                letter-spacing: 1px;
+                @include respond(laptop) {
+                    color: $color-tertiary-extra-dark;
+                    letter-spacing: 1px;
+                }
+
             }
 
             &-icon {
-                margin-right: .75rem;
+                margin-right: $size-x-tiny-3;
             }
         }
     }
@@ -32,6 +46,11 @@
     &-icon-box {
         @include iconAlignment;
 
-        margin-top: 2rem;
+        margin-top: $size-x-small-1;
+    }
+
+    &-copyright {
+        margin: 0 auto;
+        text-align: center;
     }
 }

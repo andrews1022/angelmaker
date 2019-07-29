@@ -3,6 +3,14 @@
 
     background-color: $color-black;
 
+    @include respond(mobile-lg) {
+        padding: 3rem 6rem;
+    }
+
+    @include respond(desktop) {
+        padding: $section-padding-desktop;
+    }
+
     // Stylings for the entire album cover group
     &-wrapper {
         @include respond(tab-land) {
@@ -18,8 +26,16 @@
 
     // Stylings for the album cover itself
     &-cover {
-        border-radius: $border-radius-medium;
         transform: scale(0.95);
+
+        @include respond(laptop) {
+            transition: $standard-transition;
+
+            &:hover {
+                transform: scale(0.97);
+            }
+
+        }
     }
 
     // Stylings for text/icon box
@@ -34,6 +50,22 @@
             font-size: $size-x-small-1;
             margin: $size-tiny-1 0;
             text-align: $text-center;
+
+            @include respond(mobile-lg) {
+                font-size: 3rem;
+            }
+
+            @include respond(tab-port) {
+                font-size: 3.25rem;
+            }
+
+            @include respond(tab-land) {
+                font-size: 2rem;
+            }
+
+            @include respond(laptop) {
+                font-size: 2.5rem;
+            }
         }
     }
 

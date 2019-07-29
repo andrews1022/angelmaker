@@ -73,6 +73,10 @@ img {
 // Default Font Sizes for h1-h4 & paragraphs
 h1 {
     font-size: $size-small-2;
+
+    @include respond(tab-port) {
+        font-size: $size-medium-1;
+    }
 }
 
 h2 {
@@ -104,4 +108,3 @@ ul,
 ol {
     list-style: $list-style-no-decoration;
 }
-

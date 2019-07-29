@@ -18,6 +18,14 @@
         font-size: 2rem;
         height: 4rem;
         width: 4rem;
+
+        @include respond(tab-port) {
+            font-size: 1.75rem;
+            height: 3.75rem;
+            width: 3.75rem;
+
+            margin-left: 1.5rem;
+        }
     }
 
     // Apply a hover effect only on laptop or higher resolution
@@ -85,8 +93,8 @@
         &:active,
         &:focus {
             @include respond(laptop) {
-                border-color: $color-primary;
-                color: $color-primary;
+                background-color: $color-tertiary-extra-dark;
+                color: $color-extra-light-grey-2;
                 letter-spacing: 1px;
             }
         }
@@ -102,8 +110,8 @@
         &:active,
         &:focus {
             @include respond(laptop) {
-                border-color: $color-primary;
-                color: $color-primary;
+                background-color: $color-dark-bg-grey;
+                color: $color-black;
                 letter-spacing: 1px;
             }
         }

@@ -7,12 +7,28 @@
         @include imageGrid;
         grid-gap: 2.5rem;
 
-        &-img{
+        @include respond(laptop) {
+            grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        }
+
+        &-img {
             margin: 0 auto;
+
+            @include respond(laptop) {
+                transition: $standard-transition;
+
+                &:hover {
+                    transform: scale(1.02);
+                }
+            }
         }
 
         &-button {
             @include flexboxCenter;
+
+            &-end {
+                margin: 5rem 0 0 0;
+            }
         }
     }
 }

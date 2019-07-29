@@ -2,8 +2,40 @@
     @include smallMobileSectionPadding;
     background-color: $color-extra-light-grey-2;
 
+    @include respond(mobile-lg) {
+        padding: 3rem 4.5rem;
+    }
+
+    @include respond(desktop) {
+        padding: $section-padding-desktop;
+    }
+
+    // Styles for surrounding shows box
+    &-box {
+
+        @include respond(tab-land) {
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        }
+
+        @include respond(laptop) {
+            grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+        }
+    }
+
+    // Apply margin to each group except the last
     &-wrapper:not(:last-child) {
         margin-bottom: $size-medium-1;
+
+        @include respond(tab-land) {
+            margin-bottom: 1.5rem;
+        }
+
+        @include respond(desktop) {
+            margin-bottom: 3.5rem;
+        }
+        
     }
 
     &-container {
@@ -12,7 +44,7 @@
     }
 
     &-bg-img {
-        border-radius: $border-radius-medium;
+        height: auto;
     }
 
     &-date-box {
@@ -30,11 +62,19 @@
             margin-right: $size-tiny-3;
 
             &-day {
-                font-size: $size-tiny-4;
+                font-size: 1.75rem;
+
+                @include respond(tab-port) {
+                    font-size: 2rem;
+                }
             }
 
             &-month {
-                font-size: $size-tiny-1;
+                font-size: 1rem;
+
+                @include respond(tab-port) {
+                    font-size: 1.25rem;
+                }
             }
         }
 
@@ -42,16 +82,31 @@
 
             &-venue {
                 font-size: 1.75rem;
+
+                @include respond(tab-port) {
+                    font-size: 2rem;
+                }
             }
 
             &-city {
                 font-size: 1rem;
+
+                @include respond(tab-port) {
+                    font-size: 1.25rem;
+                }
             }
         }
     }
 
     &-button {
-       @include flexboxCenter;
-       margin-top: 1rem;
+        @include flexboxCenter;
+        margin-top: 1rem;
+
+        &-absolute {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
     }
 }

@@ -2,7 +2,30 @@
     font-family: $text-brand;
     font-size: $size-tiny-3;
 
+    @include respond(mobile-lg) {
+        font-size: $size-tiny-4;
+    }
+
+    &-option {
+        transition: $standard-transition;
+
+        @include respond(laptop) {
+            margin-left: .5rem;
+        }
+    }
+
     &-span {
         font-size: $size-tiny-4;
+
+        @include respond(mobile-lg) {
+            font-size: $size-x-small-1;
+        }
+    }
+}
+
+.nav {
+    @include respond(laptop) {
+        background-color: transparentize($color-tertiary-extra-dark, .5);
+        padding-right: 2rem;
     }
 }
