@@ -1,0 +1,18 @@
+.merch {
+    @include smallMobileSectionPadding;
+
+    background: $color-black;
+
+    &-gallery {
+        @include imageGrid;
+        grid-gap: 2.5rem;
+
+        &-img{
+            margin: 0 auto;
+        }
+
+        &-button {
+            @include flexboxCenter;
+        }
+    }
+}

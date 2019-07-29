@@ -107,6 +107,12 @@
     padding: $section-padding-sm-mbl;
 }
 
+// Responsive Image Grid
+@mixin imageGrid {
+    display: grid;
+    grid-gap: .75rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
 
 
 

@@ -156,7 +156,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.section-heading-albums {
+.section-heading-light {
   color: #d8d8d8;
   margin-bottom: 2.75rem;
 }
@@ -188,21 +188,21 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 1px solid #181818;
   border-radius: 50%;
+  color: #181818;
   margin-left: 2rem;
   padding: 1rem;
   text-decoration: none;
-  -webkit-transition: all 250ms;
-  transition: all 250ms;
-  border: 1px solid #181818;
-  color: #181818;
   font-size: 2rem;
   height: 4rem;
   width: 4rem;
 }
 
 @media only screen and (min-width: 85.375em) {
-  .music-box-icon:link:hover, .music-box-icon:link:active, .music-box-icon:link:focus, .music-box-icon:visited:hover, .music-box-icon:visited:active, .music-box-icon:visited:focus {
+  .music-box-icon:hover, .music-box-icon:active, .music-box-icon:focus {
+    -webkit-transition: all 250ms;
+    transition: all 250ms;
     background-color: #181818;
     -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
             box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
@@ -218,12 +218,69 @@ body {
 }
 
 @media only screen and (min-width: 85.375em) {
-  .music-box-icon-light:link:hover, .music-box-icon-light:link:active, .music-box-icon-light:link:focus, .music-box-icon-light:visited:hover, .music-box-icon-light:visited:active, .music-box-icon-light:visited:focus {
+  .music-box-icon-light:hover, .music-box-icon-light:active, .music-box-icon-light:focus {
     background-color: #d8d8d8;
     color: #000;
     -webkit-transform: translateY(-3px);
             transform: translateY(-3px);
   }
+}
+
+.music-box-icon-preview:link, .music-box-icon-preview:visited {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding: 1rem;
+  font-size: 1.75rem;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.button {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  outline: none;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.button-dark {
+  color: #181818;
+  background-color: transparent;
+  border: 5px solid #181818;
+}
+
+@media only screen and (min-width: 85.375em) {
+  .button-dark:hover, .button-dark:active, .button-dark:focus {
+    border-color: #ef4d4b;
+    color: #ef4d4b;
+    letter-spacing: 1px;
+  }
+}
+
+.button-light {
+  background-color: transparent;
+  border: 5px solid #d8d8d8;
+  color: #d8d8d8;
+}
+
+@media only screen and (min-width: 85.375em) {
+  .button-light:hover, .button-light:active, .button-light:focus {
+    border-color: #ef4d4b;
+    color: #ef4d4b;
+    letter-spacing: 1px;
+  }
+}
+
+.gallery-wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: .75rem;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 }
 
 .nav-list {
@@ -296,8 +353,15 @@ body {
           transform: translateX(-15px);
 }
 
+.footer {
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: #97312f;
+  color: #d8d8d8;
+}
+
 .header {
-  background-image: url("../../img/hero.jpg");
+  background-image: url("../img/hero.jpg");
   background-position: center;
   background-size: cover;
   color: #181818;
@@ -323,15 +387,138 @@ body {
   width: 85%;
 }
 
+.merch {
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: #000;
+}
+
+.merch-gallery {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: .75rem;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 2.5rem;
+}
+
+.merch-gallery-img {
+  margin: 0 auto;
+}
+
+.merch-gallery-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.preview {
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.preview-box {
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+}
+
+.preview-controls {
+  background-color: #e5e5e5;
+}
+
+.preview-controls-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 0 2rem 0;
+}
+
+.preview-controls-top-heading {
+  font-family: "Cinzel", serif;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  margin-right: 1rem;
+}
+
+.preview-controls-top-heading-span {
+  font-size: 2.75rem;
+}
+
+.preview-controls-bottom {
+  padding: 0rem 1rem;
+}
+
+.preview-controls-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.preview-icon {
+  cursor: pointer;
+  font-size: 1.25rem;
+  margin: 0 1rem 1rem 0;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.preview-icon:hover, .preview-icon:active, .preview-icon:focus {
+  color: #ef4d4b;
+}
+
+.preview-song-name {
+  margin-right: auto;
+}
+
+.preview-song-name, .preview-song-time {
+  font-size: 1.25rem;
+}
+
+.preview-icon-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 30%;
+}
+
+@media only screen and (min-width: 36em) {
+  .preview-icon-box {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
 .shows {
   margin: 0 auto;
   padding: 3rem 2rem;
   background-color: #eee;
 }
 
+.shows-wrapper:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
 .shows-container {
-  margin-bottom: 3.5rem;
   position: relative;
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
 }
 
 .shows-bg-img {
@@ -370,4 +557,17 @@ body {
 
 .shows-date-box-location-city {
   font-size: 1rem;
+}
+
+.shows-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
 }

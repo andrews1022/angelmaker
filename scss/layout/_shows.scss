@@ -1,15 +1,18 @@
 .shows {
     @include smallMobileSectionPadding;
-
     background-color: $color-extra-light-grey-2;
 
+    &-wrapper:not(:last-child) {
+        margin-bottom: $size-medium-1;
+    }
+
     &-container {
-        margin-bottom: 3.5rem;
         position: relative;
+        box-shadow: $box-shadow-light-1;
     }
 
     &-bg-img {
-        border-radius: 5px;
+        border-radius: $border-radius-medium;
     }
 
     &-date-box {
@@ -23,15 +26,15 @@
         color: $color-white;
 
         &-date {
-            margin-left: 1rem;
-            margin-right: 1.5rem;
+            margin-left: $size-tiny-1;
+            margin-right: $size-tiny-3;
 
             &-day {
-                font-size: 1.75rem;
+                font-size: $size-tiny-4;
             }
 
             &-month {
-                font-size: 1rem;
+                font-size: $size-tiny-1;
             }
         }
 
@@ -45,5 +48,10 @@
                 font-size: 1rem;
             }
         }
+    }
+
+    &-button {
+       @include flexboxCenter;
+       margin-top: 1rem;
     }
 }
