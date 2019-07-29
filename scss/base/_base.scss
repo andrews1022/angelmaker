@@ -6,8 +6,9 @@
 html {
     @include htmlSelectorBBR;
 
-    font-size: $default-font-size;
-    /* Equivalent to 10px */
+    font-size: $default-font-size; /* Equivalent to 10px */
+
+    scroll-behavior: smooth;
 
 
     // Quick/easy font resizing for various screen-widths based off the Media Query Manager (see _mixins.scss)

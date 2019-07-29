@@ -114,6 +114,13 @@
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 }
 
+// Icon alignment
+@mixin iconAlignment {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
 
 
 

@@ -39,9 +39,7 @@
 
     // Stylings for album icon box
     &-icon-box {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
+        @include iconAlignment;
 
         color: $color-dark-bg-grey;
         transform: translateX(-15px);

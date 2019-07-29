@@ -1,5 +1,37 @@
 .footer {
     @include smallMobileSectionPadding;
-    background-color: #97312f;
+    background-color: #9b2a29;
     color: $color-dark-bg-grey;
+
+    &-nav {
+        margin: 4rem 0;
+        text-align: $text-center;
+
+        &-list {
+
+            &-link:link,
+            &-link:visited {
+                color: $color-dark-bg-grey;
+                font-size: 1.75rem;
+                transition: $standard-transition;
+            }
+
+            &-link:hover,
+            &-link:active,
+            &-link:focus {
+                color: $color-tertiary-extra-dark;
+                letter-spacing: 1px;
+            }
+
+            &-icon {
+                margin-right: .75rem;
+            }
+        }
+    }
+
+    &-icon-box {
+        @include iconAlignment;
+
+        margin-top: 2rem;
+    }
 }

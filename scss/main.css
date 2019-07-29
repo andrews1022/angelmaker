@@ -29,6 +29,7 @@ html {
           box-sizing: border-box;
   font-size: 62.5%;
   /* Equivalent to 10px */
+  scroll-behavior: smooth;
 }
 
 @media only screen and (min-width: 36em) {
@@ -356,8 +357,43 @@ body {
 .footer {
   margin: 0 auto;
   padding: 3rem 2rem;
-  background-color: #97312f;
+  background-color: #9b2a29;
   color: #d8d8d8;
+}
+
+.footer-nav {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.footer-nav-list-link:link, .footer-nav-list-link:visited {
+  color: #d8d8d8;
+  font-size: 1.75rem;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.footer-nav-list-link:hover, .footer-nav-list-link:active, .footer-nav-list-link:focus {
+  color: #181818;
+  letter-spacing: 1px;
+}
+
+.footer-nav-list-icon {
+  margin-right: .75rem;
+}
+
+.footer-icon-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
 }
 
 .header {
