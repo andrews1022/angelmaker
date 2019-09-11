@@ -1,112 +1,112 @@
 .shows {
-    @include smallMobileSectionPadding;
-    background-color: $color-extra-light-grey-2;
+	@include smallMobileSectionPadding;
+	background-color: $color-extra-light-grey-2;
 
-    @include respond(mobile-lg) {
-        padding: 3rem 4.5rem;
-    }
+	@include respond(mobile-lg) {
+		padding: 3rem 4.5rem;
+	}
 
-    @include respond(desktop) {
-        padding: $section-padding-desktop;
-    }
+	@include respond(desktop) {
+		padding: $section-padding-desktop;
+	}
 
-    // Styles for surrounding shows box
-    &-box {
+	// Styles for surrounding shows box
+	&-box {
 
-        @include respond(tab-land) {
-            display: grid;
-            grid-gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-        }
+		@include respond(tab-land) {
+			display: grid;
+			grid-gap: 2rem;
+			grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+		}
 
-        @include respond(laptop) {
-            grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
-        }
-    }
+		@include respond(laptop) {
+			grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+		}
+	}
 
-    // Apply margin to each group except the last
-    &-wrapper:not(:last-child) {
-        margin-bottom: $size-medium-1;
+	// Apply margin to each group except the last
+	&-wrapper:not(:last-child) {
+		margin-bottom: $size-medium-1;
 
-        @include respond(tab-land) {
-            margin-bottom: 1.5rem;
-        }
+		@include respond(tab-land) {
+			margin-bottom: 1.5rem;
+		}
 
-        @include respond(desktop) {
-            margin-bottom: 3.5rem;
-        }
-        
-    }
+		@include respond(desktop) {
+			margin-bottom: 3.5rem;
+		}
 
-    &-container {
-        position: relative;
-        box-shadow: $box-shadow-light-1;
-    }
+	}
 
-    &-bg-img {
-        height: auto;
-    }
+	&-container {
+		position: relative;
+		box-shadow: $box-shadow-light-1;
+	}
 
-    &-date-box {
-        display: flex;
-        align-items: center;
+	&-bg-img {
+		height: auto;
+	}
 
-        position: absolute;
-        bottom: 0;
-        left: 0;
+	&-date-box {
+		display: flex;
+		align-items: center;
 
-        color: $color-white;
+		position: absolute;
+		bottom: 0;
+		left: 0;
 
-        &-date {
-            margin-left: $size-tiny-1;
-            margin-right: $size-tiny-3;
+		color: $color-white;
 
-            &-day {
-                font-size: 1.75rem;
+		&-date {
+			margin-left: $size-tiny-1;
+			margin-right: $size-tiny-3;
 
-                @include respond(tab-port) {
-                    font-size: 2rem;
-                }
-            }
+			&-day {
+				font-size: 1.75rem;
 
-            &-month {
-                font-size: 1rem;
+				@include respond(tab-port) {
+					font-size: 2rem;
+				}
+			}
 
-                @include respond(tab-port) {
-                    font-size: 1.25rem;
-                }
-            }
-        }
+			&-month {
+				font-size: 1rem;
 
-        &-location {
+				@include respond(tab-port) {
+					font-size: 1.25rem;
+				}
+			}
+		}
 
-            &-venue {
-                font-size: 1.75rem;
+		&-location {
 
-                @include respond(tab-port) {
-                    font-size: 2rem;
-                }
-            }
+			&-venue {
+				font-size: 1.75rem;
 
-            &-city {
-                font-size: 1rem;
+				@include respond(tab-port) {
+					font-size: 2rem;
+				}
+			}
 
-                @include respond(tab-port) {
-                    font-size: 1.25rem;
-                }
-            }
-        }
-    }
+			&-city {
+				font-size: 1rem;
 
-    &-button {
-        @include flexboxCenter;
-        margin-top: 1rem;
+				@include respond(tab-port) {
+					font-size: 1.25rem;
+				}
+			}
+		}
+	}
 
-        &-absolute {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
+	&-button {
+		@include flexboxCenter;
+		margin-top: 1rem;
 
-    }
+		&-absolute {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+
+	}
 }

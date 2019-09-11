@@ -2,23 +2,23 @@
 // font-family: 'Montserrat', sans-serif;
 
 body {
-    font-family: $text-main;
+	font-family: $text-main;
 }
 
 .section-heading {
-    font-family: $text-brand;
-    margin-bottom: $size-tiny-3;
+	font-family: $text-brand;
+	margin-bottom: $size-tiny-3;
 
-    &-span {
-        font-size: $size-small-4;
-    }
+	&-span {
+		font-size: $size-small-4;
+	}
 
-    &-light {
-        color: $color-dark-bg-grey;
-        margin-bottom: $size-x-small-4;
+	&-light {
+		color: $color-dark-bg-grey;
+		margin-bottom: $size-x-small-4;
 
-        @include respond(tab-port) {
-            font-size: $size-medium-1;
-        }
-    }
+		@include respond(tab-port) {
+			font-size: $size-medium-1;
+		}
+	}
 }

@@ -1,77 +1,77 @@
 .header {
 
-    // Stylings for background image
-    background-image: url('../img/hero.jpg');
-    background-position: center;
-    background-size: cover;
-    color: $color-tertiary-extra-dark;
-    height: 100vh;
-    position: relative;
+	// Stylings for background image
+	background-image: url('../img/hero.jpg');
+	background-position: center;
+	background-size: cover;
+	color: $color-tertiary-extra-dark;
+	height: 100vh;
+	position: relative;
 
-    // Stylings for text/image box
-    &-box {
+	// Stylings for text/image box
+	&-box {
 
-        // Styling for AngelMaker Logo
-        &-img {
-            margin-left: $size-small-1;
-            transform: scale(.8);
+		// Styling for AngelMaker Logo
+		&-img {
+			margin-left: $size-small-1;
+			transform: scale(.8);
 
-            @include respond(mobile-lg) {
-                margin-left: 6.5rem;
-                transform: scale(.7);
-            }
+			@include respond(mobile-lg) {
+				margin-left: 6.5rem;
+				transform: scale(.7);
+			}
 
-            @include respond(tab-port) {
-                margin: 5rem 0 0 7.5rem;
-            }
+			@include respond(tab-port) {
+				margin: 5rem 0 0 7.5rem;
+			}
 
-            @include respond(tab-land) {
-                margin: -1rem 0 0 17.5rem;
-                transform: scale(.6);
-            }
+			@include respond(tab-land) {
+				margin: -1rem 0 0 17.5rem;
+				transform: scale(.6);
+			}
 
-            @include respond(laptop) {
-                margin-left: 35rem;
-                transform: scale(.7);
-            }
+			@include respond(laptop) {
+				margin-left: 35rem;
+				transform: scale(.7);
+			}
 
-            @include respond(desktop) {
-                margin-left: 60rem;
-                transform: scale(.85);
-            }
-        }
+			@include respond(desktop) {
+				margin-left: 60rem;
+				transform: scale(.85);
+			}
+		}
 
-        // Stylings for main heading
-        &-heading {
-            font-family: $text-brand;
-            font-size: $size-small-4;
+		// Stylings for main heading
+		&-heading {
+			font-family: $text-brand;
+			font-size: $size-small-4;
 
-            @include respond(tab-port) {
-                font-size: $size-large-2;
-            }
-        }
+			@include respond(tab-port) {
+				font-size: $size-large-2;
+			}
+		}
 
-        // Stylings for Text Box
-        &-text-box {
-            float: right;
-            padding: 0 $size-x-small-1;
-            text-align: right;
-            width: $wrapper-medium;
+		// Stylings for Text Box
+		&-text-box {
+			float: right;
+			padding: 0 $size-x-small-1;
+			text-align: right;
+			width: $wrapper-medium;
 
-            @include respond(tab-port) {
-                padding-right: $size-x-small-4;
-                width: 65%;
-            }
+			@include respond(tab-port) {
+				padding-right: $size-x-small-4;
+				width: 65%;
+			}
 
-            @include respond(tab-land) {
-                padding-right: 4rem;
-                width: 50%;
-            }
+			@include respond(tab-land) {
+				padding-right: 4rem;
+				width: 50%;
+			}
 
-            @include respond(desktop) {
-                padding-right: 4rem;
-                width: 100%;
-            }
-        }
-    }
+			@include respond(desktop) {
+				padding-right: 4rem;
+				width: 100%;
+			}
+		}
+	}
 }

@@ -1,79 +1,79 @@
 .albums {
-    @include smallMobileSectionPadding;
+	@include smallMobileSectionPadding;
 
-    background-color: $color-black;
+	background-color: $color-black;
 
-    @include respond(mobile-lg) {
-        padding: 3rem 6rem;
-    }
+	@include respond(mobile-lg) {
+		padding: 3rem 6rem;
+	}
 
-    @include respond(desktop) {
-        padding: $section-padding-desktop;
-    }
+	@include respond(desktop) {
+		padding: $section-padding-desktop;
+	}
 
-    // Stylings for the entire album cover group
-    &-wrapper {
-        @include respond(tab-land) {
-            display: flex;
-            justify-content: space-evenly;
-        }
-    }
+	// Stylings for the entire album cover group
+	&-wrapper {
+		@include respond(tab-land) {
+			display: flex;
+			justify-content: space-evenly;
+		}
+	}
 
-    // Apply margin bottom to all but last album box on mobile > tablet view
-    &-box:not(:last-child) {
-        margin-bottom: $size-x-large-1;
-    }
+	// Apply margin bottom to all but last album box on mobile > tablet view
+	&-box:not(:last-child) {
+		margin-bottom: $size-x-large-1;
+	}
 
-    // Stylings for the album cover itself
-    &-cover {
-        transform: scale(0.95);
+	// Stylings for the album cover itself
+	&-cover {
+		transform: scale(0.95);
 
-        @include respond(laptop) {
-            transition: $standard-transition;
+		@include respond(laptop) {
+			transition: $standard-transition;
 
-            &:hover {
-                transform: scale(0.97);
-            }
+			&:hover {
+				transform: scale(0.97);
+			}
 
-        }
-    }
+		}
+	}
 
-    // Stylings for text/icon box
-    &-text-box {
-        display: flex;
-        flex-direction: column;
+	// Stylings for text/icon box
+	&-text-box {
+		display: flex;
+		flex-direction: column;
 
-        // Stylings for album name
-        &-heading {
-            color: $color-dark-bg-grey;
-            font-family: $text-brand;
-            font-size: $size-x-small-1;
-            margin: $size-tiny-1 0;
-            text-align: $text-center;
+		// Stylings for album name
+		&-heading {
+			color: $color-dark-bg-grey;
+			font-family: $text-brand;
+			font-size: $size-x-small-1;
+			margin: $size-tiny-1 0;
+			text-align: $text-center;
 
-            @include respond(mobile-lg) {
-                font-size: 3rem;
-            }
+			@include respond(mobile-lg) {
+				font-size: 3rem;
+			}
 
-            @include respond(tab-port) {
-                font-size: 3.25rem;
-            }
+			@include respond(tab-port) {
+				font-size: 3.25rem;
+			}
 
-            @include respond(tab-land) {
-                font-size: 2rem;
-            }
+			@include respond(tab-land) {
+				font-size: 2rem;
+			}
 
-            @include respond(laptop) {
-                font-size: 2.5rem;
-            }
-        }
-    }
+			@include respond(laptop) {
+				font-size: 2.5rem;
+			}
+		}
+	}
 
-    // Stylings for album icon box
-    &-icon-box {
-        @include iconAlignment;
+	// Stylings for album icon box
+	&-icon-box {
+		@include iconAlignment;
 
-        color: $color-dark-bg-grey;
-        transform: translateX(-15px);
-    }
+		color: $color-dark-bg-grey;
+		transform: translateX(-15px);
+	}
 }
