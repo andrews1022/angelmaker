@@ -1,112 +1,52 @@
 .shows {
-	@include smallMobileSectionPadding;
-	background-color: $color-extra-light-grey-2;
 
-	@include respond(mobile-lg) {
-		padding: 3rem 4.5rem;
-	}
+  &-block {
+    @include responsiveGrid(1.5rem, (25rem, 1fr));
 
-	@include respond(desktop) {
-		padding: $section-padding-desktop;
-	}
+    @include respond(tab-land) {
+      @include responsiveGrid(1rem, (30rem, 1fr));
+    }
 
-	// Styles for surrounding shows box
-	&-box {
+    @include respond(laptop-lg) {
+      @include responsiveGrid(1.5rem, (45rem, 1fr));
+    }
 
-		@include respond(tab-land) {
-			display: grid;
-			grid-gap: 2rem;
-			grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-		}
+    &-container {
+      position: relative;
+      margin-bottom: 7rem;
+      margin-top: 2rem;
+    }
 
-		@include respond(laptop) {
-			grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
-		}
-	}
+    &-info {
+      margin-right: 1.5rem;
+    }
 
-	// Apply margin to each group except the last
-	&-wrapper:not(:last-child) {
-		margin-bottom: $size-medium-1;
+    // Position the show info container
+    &-info-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
 
-		@include respond(tab-land) {
-			margin-bottom: 1.5rem;
-		}
+      display: flex;
 
-		@include respond(desktop) {
-			margin-bottom: 3.5rem;
-		}
+      color: $clr-wht;
+      font-family: $txt-main;
+      padding-left: 1.5rem;
+    }
 
-	}
+    // Position button
+    &-btn-container {
+      @include flexCenter;
 
-	&-container {
-		position: relative;
-		box-shadow: $box-shadow-light-1;
-	}
+      position: absolute;
+      left: 0;
+      right: 0;
 
-	&-bg-img {
-		height: auto;
-	}
+      margin: 1.5rem 0;
+    }
 
-	&-date-box {
-		display: flex;
-		align-items: center;
-
-		position: absolute;
-		bottom: 0;
-		left: 0;
-
-		color: $color-white;
-
-		&-date {
-			margin-left: $size-tiny-1;
-			margin-right: $size-tiny-3;
-
-			&-day {
-				font-size: 1.75rem;
-
-				@include respond(tab-port) {
-					font-size: 2rem;
-				}
-			}
-
-			&-month {
-				font-size: 1rem;
-
-				@include respond(tab-port) {
-					font-size: 1.25rem;
-				}
-			}
-		}
-
-		&-location {
-
-			&-venue {
-				font-size: 1.75rem;
-
-				@include respond(tab-port) {
-					font-size: 2rem;
-				}
-			}
-
-			&-city {
-				font-size: 1rem;
-
-				@include respond(tab-port) {
-					font-size: 1.25rem;
-				}
-			}
-		}
-	}
-
-	&-button {
-		@include flexboxCenter;
-		margin-top: 1rem;
-
-		&-absolute {
-			position: absolute;
-			bottom: 0;
-			right: 0;
-		}
-
-	}
+    &-img {
+      @include imgStyledHover;
+    }
+  }
 }

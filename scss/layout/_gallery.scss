@@ -1,0 +1,17 @@
+.gallery {
+  &-wrapper {
+    @include responsiveGrid(1.5rem, (25rem, 1fr));
+
+    @include respond(tab-land) {
+      @include responsiveGrid(1rem, (30rem, 1fr));
+    }
+
+    @include respond(laptop-lg) {
+      @include responsiveGrid(1.5rem, (45rem, 1fr));
+    }
+  }
+
+  &-img {
+    @include imgStyledHover;
+  }
+}

@@ -1,0 +1,30 @@
+.icon-box {
+
+  &-link:link,
+  &-link:visited {
+    font-size: 2.75rem;
+    margin: 0 0.75rem;
+    opacity: 0.75;
+    transition: $transit-standard;
+
+    @include respond(mobile-lg) {
+      font-size: 3rem;
+    }
+  }
+
+  &-link:hover,
+  &-link:active,
+  &-link:focus {
+    opacity: 1;
+  }
+
+  &-link-dark:link,
+  &-link-dark:visited {
+    color: color(sec);
+  }
+
+  &-link-light:link,
+  &-link-light:visited {
+    color: $clr-wht;
+  }
+}

@@ -4,24 +4,20 @@
 @import "abstract/variables";
 
 // Base Folder Imports
-@import "base/animations";
 @import "base/base";
 @import "base/typography";
-@import "base/utilities";
 
 // Components Folder Imports
 @import "components/buttons";
-@import "components/gallery";
+@import "components/icons";
 @import "components/navigation";
 
 // Layout Folder Imports
-@import "layout/albums";
 @import "layout/footer";
+@import "layout/gallery";
 @import "layout/header";
 @import "layout/merch";
+@import "layout/music";
 @import "layout/preview";
 @import "layout/shows";
-
-
-// Vendors Folder Imports
-// These can be imported at your own discretion (or copy/paste into a standard CSS file too if you want)
+@import "layout/wrapper";

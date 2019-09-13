@@ -1,0 +1,54 @@
+.music {
+  @include coloredSection(darken(color(sec), 5%));
+
+  &-container {
+    @include respond(tab-land) {
+      @include responsiveGrid(2rem, (30rem, 1fr));
+    }
+
+    @include respond (laptop) {
+      @include responsiveGrid(2rem, (35rem, 1fr));
+    }
+
+    @include respond (laptop-lg) {
+      @include responsiveGrid(2rem, (25rem, 1fr));
+    }
+  }
+
+  &-block {
+    @include flexCenter;
+    flex-direction: column;
+
+    margin-bottom: 3rem;
+
+    &-icon {
+      color: $clr-wht;
+    }
+
+    &-img {
+      border-radius: $br-xlg;
+      transform: scale(0.98);
+      transition: $transit-standard;
+
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &-text-block {
+    @include flexCenter;
+
+    flex-direction: column;
+
+    &-heading {
+      font-size: 2.25rem;
+      margin-top: 0.75rem;
+      text-align: center;
+
+      @include respond (laptop) {
+        font-size: 3rem;
+      }
+    }
+  }
+}

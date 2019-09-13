@@ -1,77 +1,62 @@
 .header {
+  background-image: url('../img/hero.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: color(sec);
+  font-family: $txt-brand;
+  height: 100vh;
+  padding: 1.5rem 1.5rem 0 0;
 
-	// Stylings for background image
-	background-image: url('../img/hero.jpg');
-	background-position: center;
-	background-size: cover;
-	color: $color-tertiary-extra-dark;
-	height: 100vh;
-	position: relative;
+  @include respond(laptop) {
+    padding: 2.25rem 2.25rem 0 0;
+  }
 
-	// Stylings for text/image box
-	&-box {
+  &-block {
+    margin-top: 10rem;
+    padding-right: 1.5rem;
+    text-align: right;
 
-		// Styling for AngelMaker Logo
-		&-img {
-			margin-left: $size-small-1;
-			transform: scale(.8);
+    @include respond(tab-port) {
+      margin-top: 12rem;
+    }
 
-			@include respond(mobile-lg) {
-				margin-left: 6.5rem;
-				transform: scale(.7);
-			}
+    @include respond(laptop) {
+      margin-top: 15rem;
+    }
 
-			@include respond(tab-port) {
-				margin: 5rem 0 0 7.5rem;
-			}
+    &-heading {
+      font-size: 3rem;
+      margin-left: auto;
+      width: 65%;
 
-			@include respond(tab-land) {
-				margin: -1rem 0 0 17.5rem;
-				transform: scale(.6);
-			}
+      @include respond(mobile-lg) {
+        font-size: 4rem;
+      }
 
-			@include respond(laptop) {
-				margin-left: 35rem;
-				transform: scale(.7);
-			}
+      @include respond(tab-port) {
+        font-size: 4.5rem;
+      }
 
-			@include respond(desktop) {
-				margin-left: 60rem;
-				transform: scale(.85);
-			}
-		}
+      @include respond(tab-land) {
+        font-size: 4.75rem;
+        width: 60%;
+      }
 
-		// Stylings for main heading
-		&-heading {
-			font-family: $text-brand;
-			font-size: $size-small-4;
+      @include respond(laptop) {
+        font-size: 4.75rem;
+        width: 50%;
+      }
 
-			@include respond(tab-port) {
-				font-size: $size-large-2;
-			}
-		}
+      @include respond(laptop-lg) {
+        font-size: 7rem;
+        width: 45%;
+      }
 
-		// Stylings for Text Box
-		&-text-box {
-			float: right;
-			padding: 0 $size-x-small-1;
-			text-align: right;
-			width: $wrapper-medium;
-
-			@include respond(tab-port) {
-				padding-right: $size-x-small-4;
-				width: 65%;
-			}
-
-			@include respond(tab-land) {
-				padding-right: 4rem;
-				width: 50%;
-			}
-
-			@include respond(desktop) {
-				padding-right: 4rem;
-				width: 100%;
-			}
-		}
-	}
+      @include respond(desktop) {
+        font-size: 9rem;
+        width: 60%;
+      }
+    }
+  }
 }

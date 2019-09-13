@@ -1,24 +1,18 @@
-// font-family: 'Cinzel', serif;
-// font-family: 'Montserrat', sans-serif;
+.section-heading,
+.music-text-block-heading,
+.preview-heading {
+  font-family: $txt-brand;
+}
+.section-heading {
+  font-size: 3rem;
+  text-align: center;
 
-body {
-	font-family: $text-main;
+  @include respond(tab-land) {
+    font-size: 4rem;
+  }
 }
 
-.section-heading {
-	font-family: $text-brand;
-	margin-bottom: $size-tiny-3;
-
-	&-span {
-		font-size: $size-small-4;
-	}
-
-	&-light {
-		color: $color-dark-bg-grey;
-		margin-bottom: $size-x-small-4;
-
-		@include respond(tab-port) {
-			font-size: $size-medium-1;
-		}
-	}
+.preview-heading {
+  margin: 1.25rem 0;
+  text-align: center;
 }

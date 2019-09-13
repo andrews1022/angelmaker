@@ -1,34 +1,35 @@
 .merch {
-	@include smallMobileSectionPadding;
+  @include coloredSection(darken(color(sec), 5%));
 
-	background: $color-black;
+  &-container {
+    @include responsiveGrid(1rem, (25rem, 1fr));
 
-	&-gallery {
-		@include imageGrid;
-		grid-gap: 2.5rem;
+    @include respond(tab-land) {
+      @include responsiveGrid(1rem, (30rem, 1fr));
+    }
 
-		@include respond(laptop) {
-			grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-		}
+    @include respond(laptop-lg) {
+      @include responsiveGrid(1.5rem, (35rem, 1fr));
+    }
+  }
 
-		&-img {
-			margin: 0 auto;
+  &-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-			@include respond(laptop) {
-				transition: $standard-transition;
+    &-button-container {
+      margin: 2.5rem 0;
+    }
 
-				&:hover {
-					transform: scale(1.02);
-				}
-			}
-		}
+    &-img {
+      border-radius: $br-xlg;
+      transform: scale(0.98);
+      transition: $transit-standard;
 
-		&-button {
-			@include flexboxCenter;
-
-			&-end {
-				margin: 5rem 0 0 0;
-			}
-		}
-	}
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
 }

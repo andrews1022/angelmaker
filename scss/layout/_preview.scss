@@ -1,168 +1,25 @@
-// Stylings for preview section overall
 .preview {
-	@include smallMobileSectionPadding;
+  @include coloredSection (color(pri));
 
-	@include respond (mobile-lg) {
-		padding: 3rem 6rem;
-	}
+  &-button {
+    @include respond(mobile-lg) {
+      @include hideElement;
+    }
+  }
 
-	@include respond(desktop) {
-		padding: $section-padding-desktop;
-	}
+  &-video-container {
+    @include flexCenter;
 
-	&-img {
-		@include respond(tab-land) {
-			width: 40%;
-		}
+    @include simpleHide;
+    display: none;
 
-		@include respond(laptop) {
-			width: 47.5%;
-		}
-	}
+    @include respond(mobile-lg) {
+      @include simpleShow;
+      display: flex;
+    }
+  }
+}
 
-	// Stylings for the entire box (image and controls)
-	&-box {
-		box-shadow: $box-shadow-extra-light-2;
-
-		@include respond(tab-land) {
-			display: flex;
-			flex-direction: row;
-		}
-	}
-
-	// Stylings for just the controls box
-	&-controls {
-		background-color: #e5e5e5;
-
-		@include respond(tab-land) {
-			flex: 1; // prevents white space being added
-			padding: 3rem;
-		}
-
-		@include respond(laptop) {
-			padding: 3rem 5rem;
-		}
-
-		// Stylings for the top section overall (heading and icons)
-		&-top {
-			@include flexboxCenter;
-
-			padding: $size-x-small-1 0 $size-x-small-1 0;
-
-			// Stylings for the controls album name heading
-			&-heading {
-				font-family: $text-brand;
-				font-size: $size-x-small-3;
-				margin: 0 1rem 0 0;
-
-				@include respond(mobile-lg) {
-					margin-left: -5rem;
-				}
-
-				@include respond(tab-port) {
-					font-size: 3rem;
-					margin-left: -1rem;
-				}
-
-				@include respond(desktop) {
-					font-size: 3.75rem;
-					margin-left: 6rem;
-				}
-
-				&-span {
-					font-size: $size-x-small-4;
-
-					@include respond(tab-port) {
-						font-size: 3.25rem;
-					}
-
-					@include respond(desktop) {
-						font-size: 4rem;
-					}
-				}
-			}
-		}
-
-		// Stylings for the bottom section overall (surrouding the 3 controls boxes)
-		&-bottom {
-			padding: 0rem $size-tiny-1;
-
-			@include respond(mobile-lg) {
-				padding: 0rem $size-tiny-1;
-			}
-		}
-
-		&-buttons {
-			display: flex;
-			align-items: center;
-
-			@include respond(tab-land) {
-				&>* {
-					margin: 1rem 0;
-				}
-			}
-
-			@include respond(desktop) {
-				&:not(:last-child) {
-					margin-bottom: 3rem;
-				}
-			}
-		}
-	}
-
-	// Display icons as 2x2 by default
-	&-icon-box {
-		display: flex;
-		flex-wrap: wrap;
-		width: 30%;
-
-		// Then starting at mobile large, display as in a row
-		@include respond(mobile-lg) {
-			flex-wrap: nowrap;
-		}
-
-		@include respond(tab-land) {
-			margin: 0 auto;
-			width: 100%;
-		}
-	}
-
-	// Reduce font-size for song name and time to fit in small mobile screen size
-	&-song-name,
-	&-song-time,
-	&-icon {
-		font-size: $size-tiny-2;
-
-		@include respond(mobile-lg) {
-			font-size: 1.5rem;
-		}
-
-		@include respond(desktop) {
-			font-size: 1.75rem;
-		}
-	}
-
-	// Styling play icon
-	&-icon {
-		cursor: pointer;
-		margin: 0 $size-tiny-1 $size-tiny-1 0; // need to give 1rem of margin-bottom to align with bootstrap settings
-		transition: $standard-transition;
-
-		@include respond(tab-land) {
-			margin: $size-tiny-1;
-		}
-
-		&:hover,
-		&:active,
-		&:focus {
-			color: $color-primary;
-		}
-	}
-
-	// Styling for the song name
-	&-song-name {
-		margin-right: auto; // Set to margin-right: auto so it pushes the song time to the end of the container
-	}
-
-
+.video {
+  @include imgStyledHover;
 }

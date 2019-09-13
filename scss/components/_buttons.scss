@@ -1,119 +1,42 @@
-// Stylings for icon container
-.music-box {
-	display: flex;
-	justify-content: flex-end;
-
-	// Stylings for the music icons themselves shared amongst different version
-	&-icon:link,
-	&-icon:visited {
-		@include flexboxCenter;
-
-		border: 1px solid $color-tertiary-extra-dark;
-		border-radius: 50%;
-		color: $color-tertiary-extra-dark;
-		margin-left: 2rem;
-		padding: 1rem;
-		text-decoration: none;
-
-		font-size: 2rem;
-		height: 4rem;
-		width: 4rem;
-
-		@include respond(tab-port) {
-			font-size: 1.75rem;
-			height: 3.75rem;
-			width: 3.75rem;
-
-			margin-left: 1.5rem;
-		}
-	}
-
-	// Apply a hover effect only on laptop or higher resolution
-	&-icon:hover,
-	&-icon:active,
-	&-icon:focus {
-		@include respond(laptop) {
-			transition: $standard-transition;
-			background-color: $color-tertiary-extra-dark;
-			box-shadow: $box-shadow-light-1;
-			color: $color-primary;
-			transform: translateY(-3px);
-		}
-	}
-
-	// Stylings for light-grey version of the music icons
-	&-icon-light:link,
-	&-icon-light:visited {
-		border: 1px solid $color-dark-bg-grey;
-		color: $color-dark-bg-grey;
-	}
-
-	// Apply a hover effect only on laptop or higher resolution
-	&-icon-light:hover,
-	&-icon-light:active,
-	&-icon-light:focus {
-		@include respond(laptop) {
-			background-color: $color-dark-bg-grey;
-			color: $color-black;
-			transform: translateY(-3px);
-		}
-	}
-
-	// Styling for preview specific version
-	&-icon-preview:link,
-	&-icon-preview:visited {
-		margin-bottom: 1rem;
-		margin-left: 1rem;
-		padding: 1rem;
-
-		font-size: 1.75rem;
-		height: 3.5rem;
-		width: 3.5rem;
-	}
-}
-
-// Styling button with thick border, no border-radius
 .button {
-	font-size: $size-tiny-2;
-	font-weight: $font-weight-semi-bold;
-	margin: $size-tiny-1 0;
-	outline: none;
-	padding: $size-x-tiny-3 $size-tiny-3;
-	text-align: $text-center;
-	text-transform: $text-uppercase;
-	transition: $standard-transition;
+  font-family: $txt-main;
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  transition: $transit-standard;
 
-	// Stylings for dark variant
-	&-dark {
-		color: $color-tertiary-extra-dark;
-		background-color: transparent;
-		border: 5px solid $color-tertiary-extra-dark;
+  &-container {
+    @include flexCenter;
+    margin: 1.5rem 0;
+  }
 
-		&:hover,
-		&:active,
-		&:focus {
-			@include respond(laptop) {
-				background-color: $color-tertiary-extra-dark;
-				color: $color-extra-light-grey-2;
-				letter-spacing: 1px;
-			}
-		}
-	}
+  &-dark:link,
+  &-dark:visited {
+    border: 4px solid color(sec);
+    color: color(sec);
+  }
 
-	// Stylings for light variant
-	&-light {
-		background-color: transparent;
-		border: 5px solid $color-dark-bg-grey;
-		color: $color-dark-bg-grey;
+  &-dark:hover,
+  &-dark:active,
+  &-dark:focus {
+    background-color: color(sec);
+    color: $clr-wht;
+  }
 
-		&:hover,
-		&:active,
-		&:focus {
-			@include respond(laptop) {
-				background-color: $color-dark-bg-grey;
-				color: $color-black;
-				letter-spacing: 1px;
-			}
-		}
-	}
+  &-light:link,
+  &-light:visited {
+    border: 4px solid $clr-wht;
+    color: $clr-wht;
+  }
+
+  &-light:hover,
+  &-light:active,
+  &-light:focus {
+    background-color: $clr-wht;
+    color: color(sec);
+  }
+
+  &-center {
+    display: flex;
+    justify-content: center;
+  }
 }

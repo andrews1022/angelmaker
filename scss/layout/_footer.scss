@@ -1,56 +1,50 @@
 .footer {
-	@include smallMobileSectionPadding;
-	background-color: #9b2a29;
-	color: $color-dark-bg-grey;
+  @include coloredSection (color(pri));
 
-	&-wrapper {
-		@include respond(tab-port) {
-			@include flexboxCenter;
-		}
-	}
+  &-para {
+    margin-top: 1.25rem;
+    opacity: 0.75;
+    text-align: center;
+  }
 
-	&-nav {
-		margin: $size-large-1 0;
-		text-align: $text-center;
+  &-row {
+    @include respond(tab-port) {
+      display: flex;
+      align-content: center;
+      align-items: flex-start;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+    }
 
-		@include respond(tab-port) {
-			margin-right: 5rem;
-			text-align: left;
-		}
+    &-list {
+      font-size: 1.5rem;
+      text-align: center;
+      
+      @include respond(tab-port) {
+        text-align: left;
+      }
 
-		&-list {
+      &-item {
+        margin: 1rem 0;
+      }
 
-			&-link:link,
-			&-link:visited {
-				color: $color-dark-bg-grey;
-				font-size: $size-tiny-4;
-				transition: $standard-transition;
-			}
+      &-link:link,
+      &-link:visited  {
+        color: $clr-wht;
+        opacity: 0.75;
+        transition: $transit-standard;
+      }
 
-			&-link:hover,
-			&-link:active,
-			&-link:focus {
-				@include respond(laptop) {
-					color: $color-tertiary-extra-dark;
-					letter-spacing: 1px;
-				}
+      &-link:hover,
+      &-link:active,
+      &-link:focus  {
+        opacity: 1;
+      }
 
-			}
-
-			&-icon {
-				margin-right: $size-x-tiny-3;
-			}
-		}
-	}
-
-	&-icon-box {
-		@include iconAlignment;
-
-		margin-top: $size-x-small-1;
-	}
-
-	&-copyright {
-		margin: 0 auto;
-		text-align: center;
-	}
+      &-icon {
+        font-size: 1.75rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
 }
